@@ -7,12 +7,53 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/TxtUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="212dp"
+        android:gravity="center"
+        android:text="Nom d'utilisateur"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/editTxtUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/TxtUserName"
+        app:layout_constraintStart_toStartOf="@+id/TxtUserName"
+        app:layout_constraintTop_toBottomOf="@+id/TxtUserName" />
+
+    <TextView
+        android:id="@+id/TxtPwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Mot de passe"
+        app:layout_constraintEnd_toEndOf="@+id/editTxtUserName"
+        app:layout_constraintStart_toStartOf="@+id/editTxtUserName"
+        app:layout_constraintTop_toBottomOf="@+id/editTxtUserName" />
+
+    <EditText
+        android:id="@+id/editTxtPwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/TxtPwd"
+        app:layout_constraintStart_toStartOf="@+id/TxtPwd"
+        app:layout_constraintTop_toBottomOf="@+id/TxtPwd" />
+
+    <Button
+        android:id="@+id/btnConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Se connecter"
+        app:layout_constraintEnd_toEndOf="@+id/editTxtPwd"
+        app:layout_constraintStart_toStartOf="@+id/editTxtPwd"
+        app:layout_constraintTop_toBottomOf="@+id/editTxtPwd" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/TxtNamePracticien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="24dp"
+        android:text="Name Practicien"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TxtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="60dp"
+        android:text="Prénom :"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Txtadresse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Adresse :"
+        app:layout_constraintStart_toStartOf="@+id/TxtName"
+        app:layout_constraintTop_toBottomOf="@+id/TxtName" />
+
+    <TextView
+        android:id="@+id/TxtCp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Code Postal :"
+        app:layout_constraintStart_toStartOf="@+id/Txtadresse"
+        app:layout_constraintTop_toBottomOf="@+id/Txtadresse" />
+
+    <TextView
+        android:id="@+id/TxtCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Ville :"
+        app:layout_constraintStart_toStartOf="@+id/TxtCp"
+        app:layout_constraintTop_toBottomOf="@+id/TxtCp" />
+
+    <TextView
+        android:id="@+id/TxtTel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Téléphone :"
+        app:layout_constraintStart_toStartOf="@+id/TxtCity"
+        app:layout_constraintTop_toBottomOf="@+id/TxtCity" />
+
+    <TextView
+        android:id="@+id/TxtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Email :"
+        app:layout_constraintStart_toStartOf="@+id/TxtTel"
+        app:layout_constraintTop_toBottomOf="@+id/TxtTel" />
+
+    <TextView
+        android:id="@+id/TxtCoef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Coefficient de notoriété :"
+        app:layout_constraintStart_toStartOf="@+id/TxtEmail"
+        app:layout_constraintTop_toBottomOf="@+id/TxtEmail" />
+
+    <TextView
+        android:id="@+id/editTxtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Prénom du practicien"
+        app:layout_constraintBottom_toBottomOf="@+id/TxtName"
+        app:layout_constraintStart_toEndOf="@+id/TxtName" />
+
+    <TextView
+        android:id="@+id/editTxtAdresse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Adresse du practicien"
+        app:layout_constraintBottom_toBottomOf="@+id/Txtadresse"
+        app:layout_constraintStart_toEndOf="@+id/Txtadresse" />
+
+    <TextView
+        android:id="@+id/editTxtCp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Code postal du practicien"
+        app:layout_constraintBottom_toBottomOf="@+id/TxtCp"
+        app:layout_constraintStart_toEndOf="@+id/TxtCp" />
+
+    <TextView
+        android:id="@+id/editTxtCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Ville du practicien"
+        app:layout_constraintBottom_toBottomOf="@+id/TxtCity"
+        app:layout_constraintStart_toEndOf="@+id/TxtCity" />
+
+    <TextView
+        android:id="@+id/editTxtTel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="téléphone du practicien"
+        app:layout_constraintBottom_toBottomOf="@+id/TxtTel"
+        app:layout_constraintStart_toEndOf="@+id/TxtTel" />
+
+    <TextView
+        android:id="@+id/editTxtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Email du practicien"
+        app:layout_constraintBottom_toBottomOf="@+id/TxtEmail"
+        app:layout_constraintStart_toEndOf="@+id/TxtEmail" />
+
+    <TextView
+        android:id="@+id/editTxtCoef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Coefficient de notoriété du practicien"
+        app:layout_constraintBottom_toBottomOf="@+id/TxtCoef"
+        app:layout_constraintStart_toEndOf="@+id/TxtCoef" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
