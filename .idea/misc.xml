@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/chailloux.valentin/Desktop/Tissot/GSBAndroid/app/src/main/res/layout/accueil_rdv.xml" value="0.33" />
+        <entry key="..\:/Users/chailloux.valentin/Desktop/Tissot/GSBAndroid/app/src/main/res/layout/activity_accueil_rdv.xml" value="0.1" />
+        <entry key="..\:/Users/chailloux.valentin/Desktop/Tissot/GSBAndroid/app/src/main/res/layout/activity_accueil_rdv1.xml" value="0.3625" />
+        <entry key="..\:/Users/chailloux.valentin/Desktop/Tissot/GSBAndroid/app/src/main/res/layout/activity_accueil_rdv2.xml" value="0.3625" />
         <entry key="..\:/Users/chailloux.valentin/Desktop/Tissot/GSBAndroid/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/chailloux.valentin/Desktop/Tissot/GSBAndroid/app/src/main/res/layout/fiche_practicien.xml" value="0.33" />
       </map>

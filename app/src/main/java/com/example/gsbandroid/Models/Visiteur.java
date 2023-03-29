@@ -1,8 +1,30 @@
 package com.example.gsbandroid.Models;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.ArrayList;
 
 public class Visiteur {
+
+
+
+
+    @SerializedName("token")
+    private String token;
+
+    public String getToken() {
+        return "Bearer " + token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public Visiteur(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
     private int id;
     private String username;
     private String password;
@@ -13,6 +35,10 @@ public class Visiteur {
     private String ville;
     private String matricule;
     private ArrayList<Practicien> portefeuilles;
+
+
+
+
 
     public Visiteur(int id, String username, String password, String nom, String prenom, String adresse, String cp, String ville, String matricule) {
         this.id = id;
@@ -26,6 +52,9 @@ public class Visiteur {
         this.matricule = matricule;
         this.portefeuilles = new ArrayList<Practicien>();
     }
+
+
+
 
     public int getId() {
         return id;
@@ -66,6 +95,9 @@ public class Visiteur {
     public ArrayList<Practicien> getPortefeuilles() {
         return portefeuilles;
     }
+
+
+
 
     public void setId(int id) {
         this.id = id;
