@@ -20,8 +20,6 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
-    private String username;
-    private String password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, visiteur.getToken(),
                                 Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getApplicationContext(),AccueilRdvActivity.class);
-                        intent.putExtra("token", unVisiteur.getToken());
+                        intent.putExtra("token", visiteur.getToken());
                         intent.putExtra("username", unVisiteur.getUsername());
                         startActivity(intent);
                     }

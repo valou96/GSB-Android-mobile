@@ -1,0 +1,15 @@
+package com.example.gsbandroid.Models;
+
+import com.google.gson.annotations.SerializedName;
+
+import java.util.ArrayList;
+
+public class Visiteurs {
+
+    @SerializedName("hydra:member")
+    private ArrayList<Visiteur> visiteurs;
+
+    public ArrayList<Visiteur> getVisiteursr() {
+        return visiteurs;
+    }
+}

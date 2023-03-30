@@ -8,15 +8,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.gsbandroid.Models.Practicien;
 import com.example.gsbandroid.Models.Visiteur;
 import com.example.gsbandroid.R;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class RecyclerViewAdapterListPracticien extends RecyclerView.Adapter<RecyclerViewAdapterListPracticien.RecyclerViewHolder> {
-    private List<Practicien> dataModelList;
-    public RecyclerViewAdapterListPracticien(List<Practicien> dataModelList){ this.dataModelList = dataModelList;}
+    private ArrayList<Visiteur> dataModelList;
+    public RecyclerViewAdapterListPracticien(ArrayList<Visiteur> dataModelList){ this.dataModelList = dataModelList;}
     @NonNull
     @Override
     public RecyclerViewAdapterListPracticien.RecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
