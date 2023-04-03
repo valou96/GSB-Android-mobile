@@ -52,4 +52,5 @@ public class AccueilRdvActivity extends AppCompatActivity {
             }
         });
   }
+
 }
