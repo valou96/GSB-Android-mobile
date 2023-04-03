@@ -13,9 +13,9 @@ public class Practicien {
     private String mail;
     private int coefNotoriete;
     private Collection<Visite> visites;
-    private Collection<Visiteur> visiteurs;
+    private Collection<String> visiteurs;
 
-    public Practicien(int id, String nom, String prenom, String adresse, String cp, String ville, String tel, String mail, int coefNotoriete, Collection<Visite> visites, Collection<Visiteur> visiteurs) {
+    public Practicien(int id, String nom, String prenom, String adresse, String cp, String ville, String tel, String mail, int coefNotoriete, Collection<Visite> visites) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
@@ -26,7 +26,6 @@ public class Practicien {
         this.mail = mail;
         this.coefNotoriete = coefNotoriete;
         this.visites = visites;
-        this.visiteurs = visiteurs;
     }
 
     // Getters and setters
@@ -110,11 +109,11 @@ public class Practicien {
         this.visites = visites;
     }
 
-    public Collection<Visiteur> getVisiteurs() {
+    public Collection<String> getVisiteurs() {
         return visiteurs;
     }
 
-    public void setVisiteurs(Collection<Visiteur> visiteurs) {
+    public void setVisiteurs(Collection<String> visiteurs) {
         this.visiteurs = visiteurs;
     }
 }

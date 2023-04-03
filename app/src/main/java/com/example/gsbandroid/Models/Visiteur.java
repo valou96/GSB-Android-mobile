@@ -34,7 +34,8 @@ public class Visiteur {
     private String cp;
     private String ville;
     private String matricule;
-    private ArrayList<Practicien> portefeuilles;
+    @SerializedName("portFeuille")
+    private ArrayList<String> portefeuilles;
 
 
 
@@ -50,7 +51,7 @@ public class Visiteur {
         this.cp = cp;
         this.ville = ville;
         this.matricule = matricule;
-        this.portefeuilles = new ArrayList<Practicien>();
+        this.portefeuilles = new ArrayList<String>();
     }
 
 
@@ -92,7 +93,7 @@ public class Visiteur {
         return matricule;
     }
 
-    public ArrayList<Practicien> getPortefeuilles() {
+    public ArrayList<String> getPortefeuilles() {
         return portefeuilles;
     }
 
@@ -135,11 +136,8 @@ public class Visiteur {
         this.matricule = matricule;
     }
 
-    public void setPortefeuilles(ArrayList<Practicien> portefeuilles) {
+    public void setPortefeuilles(ArrayList<String> portefeuilles) {
         this.portefeuilles = portefeuilles;
     }
 
-    public void addPortefeuille(Practicien portefeuille) {
-        this.portefeuilles.add(portefeuille);
-    }
 }

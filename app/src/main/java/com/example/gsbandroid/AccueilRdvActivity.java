@@ -41,6 +41,12 @@ public class AccueilRdvActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<Visiteurs> call, Response<Visiteurs> response) {
                Visiteurs visiteur = response.body();
+
+              /* binding.RvPracticien.setHasFixedSize(true);
+               LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL,false);
+               binding.RvPracticien.setLayoutManager(layoutManager);
+               binding.RvPracticien.setFocusable(false);*/
+
                RecyclerViewAdapterListPracticien adapterListPracticien = new RecyclerViewAdapterListPracticien(visiteur.getVisiteursr());
                 binding.RvPracticien.setAdapter(adapterListPracticien);
             }
