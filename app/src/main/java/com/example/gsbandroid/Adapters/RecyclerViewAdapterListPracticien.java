@@ -8,14 +8,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.gsbandroid.Models.Practicien;
 import com.example.gsbandroid.Models.Visiteur;
 import com.example.gsbandroid.R;
 
 import java.util.ArrayList;
 
 public class RecyclerViewAdapterListPracticien extends RecyclerView.Adapter<RecyclerViewAdapterListPracticien.RecyclerViewHolder> {
-    private ArrayList<Visiteur> dataModelList;
-    public RecyclerViewAdapterListPracticien(ArrayList<Visiteur> dataModelList){ this.dataModelList = dataModelList;}
+    private ArrayList<Practicien> dataModelList;
+    public RecyclerViewAdapterListPracticien(ArrayList<Practicien> dataModelList){ this.dataModelList = dataModelList;}
     @NonNull
     @Override
     public RecyclerViewAdapterListPracticien.RecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -40,14 +41,11 @@ public class RecyclerViewAdapterListPracticien extends RecyclerView.Adapter<Recy
     public class RecyclerViewHolder extends RecyclerView.ViewHolder {
         TextView PracName;
 
-//        ImageView img_temps;
 
         public RecyclerViewHolder(@NonNull View itemView) {
             super(itemView);
 
             PracName = itemView.findViewById(R.id.RvPracticien);
-
-//            img_temps = itemView.findViewById(R.id.text_temp);
         }
     }
 }

@@ -24,15 +24,22 @@ public class Visiteur {
         this.username = username;
         this.password = password;
     }
-
+    @SerializedName("id")
     private int id;
+    @SerializedName("username")
     private String username;
     private String password;
+    @SerializedName("nom")
     private String nom;
+    @SerializedName("prenom")
     private String prenom;
+    @SerializedName("adresse")
     private String adresse;
+    @SerializedName("cp")
     private String cp;
+    @SerializedName("ville")
     private String ville;
+    @SerializedName("matricule")
     private String matricule;
     @SerializedName("portFeuille")
     private ArrayList<String> portefeuilles;

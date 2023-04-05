@@ -9,7 +9,7 @@ public class Visiteurs {
     @SerializedName("hydra:member")
     private ArrayList<Visiteur> visiteurs;
 
-    public ArrayList<Visiteur> getVisiteursr() {
+    public ArrayList<Visiteur> getVisiteurs() {
         return visiteurs;
     }
 }

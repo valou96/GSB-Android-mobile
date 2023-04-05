@@ -1,21 +1,34 @@
 package com.example.gsbandroid.Models;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.Collection;
 
 public class Practicien {
+    @SerializedName("id")
     private int id;
+    @SerializedName("nom")
     private String nom;
+    @SerializedName("prenom")
     private String prenom;
+    @SerializedName("adresse")
     private String adresse;
+    @SerializedName("cp")
     private String cp;
+    @SerializedName("ville")
     private String ville;
+    @SerializedName("tel")
     private String tel;
+    @SerializedName("mail")
     private String mail;
+    @SerializedName("coefNotoriete")
     private int coefNotoriete;
-    private Collection<Visite> visites;
+    @SerializedName("visite")
+    private Collection<String> visites;
+    @SerializedName("visiteurs")
     private Collection<String> visiteurs;
 
-    public Practicien(int id, String nom, String prenom, String adresse, String cp, String ville, String tel, String mail, int coefNotoriete, Collection<Visite> visites) {
+    public Practicien(int id, String nom, String prenom, String adresse, String cp, String ville, String tel, String mail, int coefNotoriete, Collection<String> visites) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
@@ -101,11 +114,11 @@ public class Practicien {
         this.coefNotoriete = coefNotoriete;
     }
 
-    public Collection<Visite> getVisites() {
+    public Collection<String> getVisites() {
         return visites;
     }
 
-    public void setVisites(Collection<Visite> visites) {
+    public void setVisites(Collection<String> visites) {
         this.visites = visites;
     }
 

@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = new Intent(getApplicationContext(),AccueilRdvActivity.class);
                         intent.putExtra("token", visiteur.getToken());
                         intent.putExtra("username", unVisiteur.getUsername());
+                        intent.putExtra("id", unVisiteur.getId());
                         startActivity(intent);
                     }
 
