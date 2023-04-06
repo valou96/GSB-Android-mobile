@@ -26,7 +26,7 @@ public class Fiche_Practicien extends AppCompatActivity {
         gsbandroidService service =
                 RetrofitClientInstance.getRetrofitInstance().create(gsbandroidService.
                         class);
-        //manque deux argument Token et id du practicien
+        //manque deux argument Token et id du practiciens
         Call<Practicien> call = service.getPracById();
         call.enqueue(new Callback<Practicien>() {
             @Override
