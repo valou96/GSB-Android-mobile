@@ -17,6 +17,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Fiche_Practicien"
+            android:exported="false" />
+        <activity
             android:name=".AccueilRdvActivity"
             android:exported="false" />
         <activity

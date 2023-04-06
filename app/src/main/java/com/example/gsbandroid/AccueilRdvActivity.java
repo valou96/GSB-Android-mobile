@@ -5,10 +5,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.gsbandroid.Adapters.RecyclerViewAdapterListPracticien;
+import com.example.gsbandroid.Interfaces.RecyclerViewClickListener;
 import com.example.gsbandroid.Models.Practicien;
+import com.example.gsbandroid.Models.RecyclerTouchListener;
 import com.example.gsbandroid.Models.Visiteur;
 import com.example.gsbandroid.Models.Visiteurs;
 import com.example.gsbandroid.Interfaces.gsbandroidService;
@@ -34,7 +37,6 @@ public class AccueilRdvActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_accueil_rdv1);
         binding = ActivityAccueilRdv1Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -61,7 +63,6 @@ public class AccueilRdvActivity extends AppCompatActivity {
             public void onResponse(Call<Visiteurs> call, Response<Visiteurs> response) {
                Visiteurs visiteurs = response.body();
 
-
                 for (Visiteur visiteur : visiteurs.getVisiteurs()) {
                     if (username.equals(visiteur.getUsername())){
                         visiteurAuth = visiteur;
@@ -78,9 +79,18 @@ public class AccueilRdvActivity extends AppCompatActivity {
                         public void onResponse(Call<Practicien> call, Response<Practicien> response) {
                            Practicien unPracticien = response.body();
                            ListPracticien.add(unPracticien);
+                            binding.RecyclerViewPracticien.setHasFixedSize(true);
+                            LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL,false);
+                            binding.RecyclerViewPracticien.setLayoutManager(layoutManager);
+                            binding.RecyclerViewPracticien.setFocusable(false);
                             adapter = new RecyclerViewAdapterListPracticien(ListPracticien);
-                            binding.RvPracticien.setAdapter(adapter);
-
+                            binding.RecyclerViewPracticien.setAdapter(adapter);
+                            binding.RecyclerViewPracticien.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), binding.RecyclerViewPracticien, new RecyclerViewClickListener() {
+                                @Override
+                                public void onClick(View view, int position) {
+                                    String pracName = ListPracticien.get(position).getNom();
+                                }
+                            }));
                         }
 
                         @Override
@@ -89,15 +99,7 @@ public class AccueilRdvActivity extends AppCompatActivity {
                         }
                     });
                 }
-                binding.RvPracticien.setHasFixedSize(true);
-                LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL,false);
-                binding.RvPracticien.setLayoutManager(layoutManager);
-                binding.RvPracticien.setFocusable(false);
-
             }
-
-
-
 
             @Override
             public void onFailure(Call<Visiteurs> call, Throwable t) {

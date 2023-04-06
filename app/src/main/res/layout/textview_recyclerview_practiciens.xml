@@ -6,21 +6,12 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/TxtAccueil"
+        android:id="@+id/textView_RecyclerView_Practicien"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="54dp"
-        android:text="votre porte feuille de practicien"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/RecyclerViewPracticien"
-        android:layout_width="335dp"
-        android:layout_height="464dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="@+id/TxtAccueil"
-        app:layout_constraintStart_toStartOf="@+id/TxtAccueil"
-        app:layout_constraintTop_toBottomOf="@+id/TxtAccueil" />
 </androidx.constraintlayout.widget.ConstraintLayout>

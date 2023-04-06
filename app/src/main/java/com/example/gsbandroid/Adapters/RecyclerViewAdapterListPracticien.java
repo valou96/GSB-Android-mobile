@@ -9,19 +9,19 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.gsbandroid.Models.Practicien;
-import com.example.gsbandroid.Models.Visiteur;
 import com.example.gsbandroid.R;
 
 import java.util.ArrayList;
 
 public class RecyclerViewAdapterListPracticien extends RecyclerView.Adapter<RecyclerViewAdapterListPracticien.RecyclerViewHolder> {
     private ArrayList<Practicien> dataModelList;
+
     public RecyclerViewAdapterListPracticien(ArrayList<Practicien> dataModelList){ this.dataModelList = dataModelList;}
     @NonNull
     @Override
     public RecyclerViewAdapterListPracticien.RecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         RecyclerViewHolder viewHolder;
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_accueil_rdv1, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.textview_recyclerview_practiciens, parent, false);
         viewHolder = new RecyclerViewHolder(view);
         return viewHolder;
     }
@@ -44,8 +44,7 @@ public class RecyclerViewAdapterListPracticien extends RecyclerView.Adapter<Recy
 
         public RecyclerViewHolder(@NonNull View itemView) {
             super(itemView);
-
-            PracName = itemView.findViewById(R.id.RvPracticien);
+            PracName = itemView.findViewById(R.id.textView_RecyclerView_Practicien);
         }
     }
 }
