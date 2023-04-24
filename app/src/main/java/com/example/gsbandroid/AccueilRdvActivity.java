@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 import com.example.gsbandroid.Adapters.RecyclerViewAdapterListPracticien;
 import com.example.gsbandroid.Interfaces.RecyclerViewClickListener;
@@ -89,6 +88,11 @@ public class AccueilRdvActivity extends AppCompatActivity {
                                 @Override
                                 public void onClick(View view, int position) {
                                     String pracName = ListPracticien.get(position).getNom();
+                                    Intent intent = new Intent(getApplicationContext(), FichePracticienActivity.class);
+                                    intent.putExtra("token", token);
+                                    intent.putExtra("username", username);
+                                    intent.putExtra("idPrac", unPracticien.getId());
+                                    startActivity(intent);
                                 }
                             }));
                         }

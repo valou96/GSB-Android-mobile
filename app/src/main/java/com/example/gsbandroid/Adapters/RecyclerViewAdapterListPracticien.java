@@ -29,7 +29,7 @@ public class RecyclerViewAdapterListPracticien extends RecyclerView.Adapter<Recy
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewAdapterListPracticien.RecyclerViewHolder
     holder,int position){
-        holder.PracName.setText(String.valueOf(dataModelList.get(position).getNom().toUpperCase()));
+        holder.PracName.setText(String.valueOf( "Dr." + dataModelList.get(position).getNom().toUpperCase()));
     }
 
 

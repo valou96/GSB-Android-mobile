@@ -16,13 +16,13 @@ public class RecyclerTouchListener implements RecyclerView.OnItemTouchListener {
 
     public RecyclerTouchListener(Context context, final RecyclerView recyclerView, final RecyclerViewClickListener clickListener){
         this.clickListener = clickListener;
-        this.gestureDetector = new GestureDetector(context, new GestureDetector.SimpleOnGestureListener()) {
+        this.gestureDetector = new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {
 
             @Override
             public boolean onSingleTapUp(MotionEvent e) {
                 return true;
             }
-        };
+        });
 
         }
 
