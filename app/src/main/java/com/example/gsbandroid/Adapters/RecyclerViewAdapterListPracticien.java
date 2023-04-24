@@ -44,7 +44,7 @@ public class RecyclerViewAdapterListPracticien extends RecyclerView.Adapter<Recy
 
         public RecyclerViewHolder(@NonNull View itemView) {
             super(itemView);
-            PracName = itemView.findViewById(R.id.textView_RecyclerView_Practicien);
+            PracName = itemView.findViewById(R.id.textView_RecyclerView_visites);
         }
     }
 }

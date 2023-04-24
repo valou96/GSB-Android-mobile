@@ -1,6 +1,7 @@
 package com.example.gsbandroid.Interfaces;
 
 import com.example.gsbandroid.Models.Practicien;
+import com.example.gsbandroid.Models.Visite;
 import com.example.gsbandroid.Models.Visiteur;
 import com.example.gsbandroid.Models.Visiteurs;
 
@@ -21,5 +22,8 @@ public interface gsbandroidService {
 
         @GET("practiciens/{id}")
         Call<Practicien> getPracById(@Header("Authorization") String token, @Path("id") String Id);
+
+        @GET("visite")
+        Call<Visite> getVisite(@Header("Authorization") String token);
 
 }
