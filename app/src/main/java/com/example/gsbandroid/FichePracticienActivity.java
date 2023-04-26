@@ -28,9 +28,10 @@ public class FichePracticienActivity extends AppCompatActivity {
     private String token;
     private int idPrac;
     private String idPracStr;
-    private ArrayList<Visite> listVisite;
+    private ArrayList<String> listVisite;
     private RecyclerViewAdapterListVisite adapter;
-    private String uneVisite;
+    private Visite uneVisite;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,16 +58,17 @@ public class FichePracticienActivity extends AppCompatActivity {
         call.enqueue(new Callback<Practicien>() {
             @Override
             public void onResponse(Call<Practicien> call, Response<Practicien> response) {
-                Practicien practicien = response.body();
-                binding.TvPrenomPracticien.setText(String.valueOf(practicien.getNom().toUpperCase()));
-                binding.TvPrenom1Practicien.setText(String.valueOf(practicien.getPrenom().toUpperCase()));
-                binding.TvAdresse1Practicien.setText(String.valueOf(practicien.getAdresse().toUpperCase()));
-                binding.TvCp1Practicien.setText(String.valueOf(practicien.getCp().toUpperCase()));
-                binding.TvVille1Practicien.setText(String.valueOf(practicien.getVille().toUpperCase()));
-                binding.TvTelephone1Practicien.setText(String.valueOf(practicien.getTel().toUpperCase()));
-                binding.TvEmail1Practicien.setText(String.valueOf(practicien.getMail().toUpperCase()));
-                binding.TvCoef1Practicien.setText(String.valueOf(practicien.getCoefNotoriete()));
-                uneVisite = practicien.getVisites();
+                Practicien unPracticien = response.body();
+                binding.TvPrenomPracticien.setText(String.valueOf(unPracticien.getNom().toUpperCase()));
+                binding.TvPrenom1Practicien.setText(String.valueOf(unPracticien.getPrenom().toUpperCase()));
+                binding.TvAdresse1Practicien.setText(String.valueOf(unPracticien.getAdresse().toUpperCase()));
+                binding.TvCp1Practicien.setText(String.valueOf(unPracticien.getCp().toUpperCase()));
+                binding.TvVille1Practicien.setText(String.valueOf(unPracticien.getVille().toUpperCase()));
+                binding.TvTelephone1Practicien.setText(String.valueOf(unPracticien.getTel().toUpperCase()));
+                binding.TvEmail1Practicien.setText(String.valueOf(unPracticien.getMail().toUpperCase()));
+                binding.TvCoef1Practicien.setText(String.valueOf(unPracticien.getCoefNotoriete()));
+/*
+                uneVisite = unPracticien.getVisites();
                 listVisite.add(uneVisite);
                 binding.RecyclerViewVisite.setHasFixedSize(true);
                 LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
@@ -74,11 +76,14 @@ public class FichePracticienActivity extends AppCompatActivity {
                 binding.RecyclerViewVisite.setFocusable(false);
                 adapter = new RecyclerViewAdapterListPracticien(listVisite);
                 binding.RecyclerViewVisite.setAdapter(adapter);
+
+ */
             }
             @Override
             public void onFailure(Call<Practicien> call, Throwable t) {
 
             }
+
         });
     }
 }
